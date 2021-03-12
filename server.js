@@ -19,6 +19,10 @@ app.use(express.json({extended : false}));  // to use body parser
 
 
 app.use('/User' , require('./routes/user'));
+app.use('/Admin' , require('./routes/Admin'));
+app.use('/Adminlog' , require('./routes/adminAuth'))
+app.use('/Add' , require('./routes/Products'))
+app.use('/login' , require('./routes/auth'));
 
 app.listen(PORT, () =>{
     console.log(`its working on port number ${PORT}`)

@@ -14,7 +14,7 @@ module.exports = function(req , res , next){
     //to verify
     try{
         const decode = jwt.verify(token , config.get('secrettoken'));
-        req.admin = decode.admin;
+        req.user = decode.user;
         next();
     }catch(err){
             res.status(401).json({msg : 'Not verified'})
