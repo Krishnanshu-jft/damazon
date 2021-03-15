@@ -45,8 +45,8 @@ router.post('/' , [
 
        //get jsontoken
        const payload = {
-           user : {
-               id : user.id
+           admin : {
+               id : admin.id
            }
        }
        jwt.sign(payload , 

@@ -30,6 +30,7 @@ check('password','enter password').exists()
     try{
         //see if user exist or not
         let user = await User.findOne({email});
+        console.log(user);
 
         if(!user){
             return res.status(400).json({errors : [{msg : 'Invalid username'}]})
